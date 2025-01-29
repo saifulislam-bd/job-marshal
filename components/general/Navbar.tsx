@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/logo.png";
 import { Button } from "../ui/button";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Navbar = () => {
   return (
@@ -12,7 +13,10 @@ const Navbar = () => {
           Job<span className="text-primary">Marshal</span>
         </h1>
       </Link>
-      <Button>Login</Button>
+      <div className="flex items-center gap-4">
+        <ThemeToggle />
+        <Button>Login</Button>
+      </div>
     </div>
   );
 };
